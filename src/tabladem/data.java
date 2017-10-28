@@ -51,4 +51,13 @@ public class data {
         String resul9=String.valueOf(num*3);
         ventana.jLabel51.setText(resul9);
     }
+    
+    public void mult(){
+    Integer num1,num2;
+    num1=Integer.parseInt(ventana.Mnum1.getText());
+    num2 = Integer.parseInt(ventana.Mnum2.getText());
+    
+    String resul9=String.valueOf(num1*num2);
+        ventana.resultado.setText(resul9);
+    }
 }
