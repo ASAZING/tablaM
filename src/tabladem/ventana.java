@@ -82,13 +82,16 @@ public class ventana extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        opera = new javax.swing.JPanel();
         Mnum1 = new javax.swing.JTextField();
         Mnum2 = new javax.swing.JTextField();
-        jLabel52 = new javax.swing.JLabel();
+        sig = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         resultado = new javax.swing.JLabel();
         multipicar = new javax.swing.JButton();
+        multipicar1 = new javax.swing.JButton();
+        multipicar2 = new javax.swing.JButton();
+        multipicar3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.Color.gray);
@@ -392,8 +395,8 @@ public class ventana extends javax.swing.JFrame {
                         .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
-        jPanel2.setBackground(java.awt.Color.lightGray);
-        jPanel2.setForeground(java.awt.Color.white);
+        opera.setBackground(java.awt.Color.lightGray);
+        opera.setForeground(java.awt.Color.white);
 
         Mnum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -407,36 +410,36 @@ public class ventana extends javax.swing.JFrame {
             }
         });
 
-        jLabel52.setText("x");
+        sig.setText("x");
 
         jLabel53.setText("_________________________");
 
         resultado.setText("                                   0");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout operaLayout = new javax.swing.GroupLayout(opera);
+        opera.setLayout(operaLayout);
+        operaLayout.setHorizontalGroup(
+            operaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, operaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(operaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel52)
+                    .addGroup(operaLayout.createSequentialGroup()
+                        .addComponent(sig)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(operaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Mnum1)
                             .addComponent(Mnum2, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))))
                 .addGap(21, 21, 21))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        operaLayout.setVerticalGroup(
+            operaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(operaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel52)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(operaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(sig)
+                    .addGroup(operaLayout.createSequentialGroup()
                         .addComponent(Mnum1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Mnum2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -451,6 +454,27 @@ public class ventana extends javax.swing.JFrame {
         multipicar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multipicarActionPerformed(evt);
+            }
+        });
+
+        multipicar1.setText("Restar");
+        multipicar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multipicar1ActionPerformed(evt);
+            }
+        });
+
+        multipicar2.setText("Dividir");
+        multipicar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multipicar2ActionPerformed(evt);
+            }
+        });
+
+        multipicar3.setText("Sumar");
+        multipicar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multipicar3ActionPerformed(evt);
             }
         });
 
@@ -471,10 +495,16 @@ public class ventana extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(opera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(multipicar1)
+                            .addComponent(multipicar2)
+                            .addComponent(multipicar3)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(multipicar)
-                        .addGap(39, 39, 39))))
+                        .addGap(25, 25, 25))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -489,9 +519,15 @@ public class ventana extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(opera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(multipicar)))
+                        .addComponent(multipicar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(multipicar2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(multipicar3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(multipicar1)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
@@ -521,6 +557,18 @@ public class ventana extends javax.swing.JFrame {
     private void multipicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multipicarActionPerformed
      multi.mult();
     }//GEN-LAST:event_multipicarActionPerformed
+
+    private void multipicar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multipicar1ActionPerformed
+     rest.resta();
+    }//GEN-LAST:event_multipicar1ActionPerformed
+
+    private void multipicar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multipicar2ActionPerformed
+        div.div();
+    }//GEN-LAST:event_multipicar2ActionPerformed
+
+    private void multipicar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multipicar3ActionPerformed
+       sum.suma();
+    }//GEN-LAST:event_multipicar3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -574,19 +622,25 @@ public class ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     public static javax.swing.JLabel jLabel50;
     public static javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     public static javax.swing.JButton multipicar;
+    public static javax.swing.JButton multipicar1;
+    public static javax.swing.JButton multipicar2;
+    public static javax.swing.JButton multipicar3;
     public static javax.swing.JTextField numm;
+    private javax.swing.JPanel opera;
     public static javax.swing.JLabel resultado;
     public static javax.swing.JButton salir;
+    public static javax.swing.JLabel sig;
     // End of variables declaration//GEN-END:variables
     public static data capturar=new data();
     public static data multi=new data();
+    public static data sum=new data();
+    public static data rest=new data();
+    public static data div=new data();
 }

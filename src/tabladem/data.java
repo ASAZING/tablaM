@@ -56,8 +56,37 @@ public class data {
     Integer num1,num2;
     num1=Integer.parseInt(ventana.Mnum1.getText());
     num2 = Integer.parseInt(ventana.Mnum2.getText());
+    ventana.sig.setText("x");
     
-    String resul9=String.valueOf(num1*num2);
+    String resul9=String.valueOf((num1)*(num2));
         ventana.resultado.setText(resul9);
     }
-}
+    public void div(){
+    Integer num1,num2;
+    num1=Integer.parseInt(ventana.Mnum1.getText());
+    num2 = Integer.parseInt(ventana.Mnum2.getText());
+    
+    String resul9=String.valueOf((num1)/(num2));
+        ventana.resultado.setText(resul9);
+        ventana.sig.setText("/");
+    }
+    public void suma(){
+    Integer num1,num2;
+    num1=Integer.parseInt(ventana.Mnum1.getText());
+    num2 = Integer.parseInt(ventana.Mnum2.getText());
+    
+    String resul9=String.valueOf((num1)+(num2));
+        ventana.resultado.setText(resul9);
+        ventana.sig.setText("+");
+    }
+    public void resta(){
+    Integer num1,num2;
+    num1=Integer.parseInt(ventana.Mnum1.getText());
+    num2 = Integer.parseInt(ventana.Mnum2.getText());
+    
+    String resul9=String.valueOf((num1)-(num2));
+        ventana.resultado.setText(resul9); 
+        ventana.sig.setText("-");
+
+    }
+}    
